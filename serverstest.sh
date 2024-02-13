@@ -3,6 +3,7 @@ echo -n > /etc/servers_hosts
 echo -n > /etc/bad_servers
 echo -n > /etc/reservehosts
 echo -n > /etc/anotherhosts
+echo -n > /etc/banner_add_hosts
 hosts=("1.1.1.2" "1.1.1.3" "1.1.1.4")
 for h in ${hosts[@]}; do
   result=$(curl -Is http://$h --connect-timeout 2 | head -n 1 )
